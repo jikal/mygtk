@@ -48,7 +48,7 @@ static GtkItemFactoryEntry menu_items[] = {
 	{"/编辑 (_E) /查找",NULL,on_menu_activate,(guint)"查找","<StockItem>",GTK_STOCK_FIND},
 	{"/帮助 (_H)",NULL,NULL,0,"<LastBranch>"},
 	{"/帮助 (_H) /帮助",NULL,on_menu_activate,(guint)"帮助","<StockItem>",GTK_STOCK_HELP},
-	{"/帮助 (_H) /关于...",NULL,on_menu_activate,(guint)"关于","<StockItem>",NULL}
+	{"/帮助 (_H) /关于...",NULL,on_menu_activate,(guint)"关于","<StockItem>",GTK_STOCK_HELP}
 };
 
 void on_menu_activate(GtkMenuItem *item,gpointer data){

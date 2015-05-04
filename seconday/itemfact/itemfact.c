@@ -60,7 +60,7 @@ int main(int argc , char *argv[]){
 	GtkWidget *box;//盒装容器指针
 	GtkWidget *menubar;//菜单条指针
 	GtkAccelGroup *accel_group;//快捷键集指针
-	GtkItemFactory *item_factory;//
+	GtkItemFactory *item_factory;//菜单类型指针
 	gint n = 15;
 	gtk_init(&argc,&argv);
 	window = gtk_window_new(GTK_WINDOW_TOPLEVEL);
