@@ -1,0 +1,3 @@
+CC = gcc 
+all:
+	$(CC) -o viewtext viewtext.c `pkg-config --cflags --libs gtk+-2.0`
