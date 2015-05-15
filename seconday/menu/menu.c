@@ -85,7 +85,7 @@ int main(int argc , char *argv[]){
 	menuitem = gtk_menu_item_new_with_label("关于。。。。");
 	gtk_menu_shell_append(GTK_MENU_SHELL(helpmenu),menuitem);
 	g_signal_connect(G_OBJECT(menuitem),"activate",G_CALLBACK(on_menu_activate),(gpointer)("about"));
-	gtk_menu_item_set_submenu(GTK_MENU_ITEM(rootmenu),helpmenu);
+	gtk_menu_item_set_submenu(GTK_MENU_ITEM(rootmenu),helpm enu);
 	gtk_menu_shell_append(GTK_MENU_SHELL(menubar),rootmenu);//将帮助菜单放入menubar
 	gtk_box_pack_start(GTK_BOX(box),menubar,FALSE,FALSE,0);
 	gtk_widget_show_all(window);
