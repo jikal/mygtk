@@ -33,8 +33,9 @@ void mythread(GtkWidget *button){
 }
 
 
-void on_button(GtkWidget *button,GdkEventKey *event,gpointer data){
+void on_button(GtkWidget *button,GdkEventKey *event){
 	if(GDK_Return == event->keyval){
+		//gtk_widget_set_sensitive(button,FALSE);
 		g_thread_create(mythread,button,FALSE,NULL);
 	}
 }

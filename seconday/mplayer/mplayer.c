@@ -242,13 +242,6 @@ void launch_mplayer(GtkWidget *gw,gpointer data)
 	status=STAT_PLAY;
 	if((fp=popen(cmd,"r"))!=NULL)
 	{
-		/*while(!feof(fp)){
-			fgets(str,256,fp);
-			if(strncmp(str, "ANS_PERCENT_POSITION=", 21) == 0){
-				pos = atoi(str+21) / 100.0;
-			}
-			
-		}*/
 		pthread_create(&th,NULL,(void *)read_func,(void *)fp);
 		pthread_detach(th);
 	}
