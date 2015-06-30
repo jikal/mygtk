@@ -37,10 +37,8 @@ void button_event(GtkWidget *widget,gpointer *data)
 {
 	const gchar *text="How are you!\n";
 	GtkTextIter start,end;
-	
-		
-		gtk_text_buffer_get_bounds(GTK_TEXT_BUFFER(buffer),&start,&end);/*获得缓冲区开始和结束位置的Iter*/
-		gtk_text_buffer_insert(GTK_TEXT_BUFFER(buffer),&end,text,strlen(text));/*插入文本到缓冲区*/
+	gtk_text_buffer_get_bounds(GTK_TEXT_BUFFER(buffer),&start,&end);/*获得缓冲区开始和结束位置的Iter*/
+	gtk_text_buffer_insert(GTK_TEXT_BUFFER(buffer),&end,text,strlen(text));/*插入文本到缓冲区*/
 
 }
 

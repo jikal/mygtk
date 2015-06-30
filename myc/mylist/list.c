@@ -44,3 +44,25 @@ int sizeList(Node *head){
 }
 
 //c查看链表的回调函数
+static void showStu(const Node *e){
+	printf("num:%10d,name:%5.2s\n",e->num,e->name);
+}
+void showList(Node *head){
+	Node *cur = head->next;
+	while(cur != head){
+		showStu(cur);
+		cur = cur->next;
+	}
+	printf("\n");
+}
+//创建一个节点
+Node *creatNode(void){
+	Node *newNode = (Node *)malloc(sizeof(Node));
+	if(newNode == NULL){
+		return NULL;
+	}
+	newNode ->next = NULL;
+	newNode ->prev = NULL;
+	return newNode;	
+}
+
